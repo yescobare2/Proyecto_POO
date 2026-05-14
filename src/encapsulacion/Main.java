@@ -2,6 +2,9 @@ package encapsulacion;
 
 import gettersAndSetters.ControlVolumen;
 import gettersAndSetters.NivelAgua;
+import herencia.Programador;
+import herencia2.Impresora;
+import herencia2.Monitor;
 
 public class Main {
 
@@ -11,7 +14,7 @@ public class Main {
 		Libro();
 
 		System.out.println("------------------------------------------");
-		System.out.println("Getters y Setters");
+		System.out.println("GETTERS AND SETTERS");
 		System.out.println("------------------------------------------");
 		
 		System.out.println("---Nivel del agua---");
@@ -25,13 +28,27 @@ public class Main {
 		disp1.setNivel(80);
 		disp1.setNivel(145);
 		
+		System.out.println("------------------------------------------");
+		System.out.println("HERENCIA");
+		System.out.println("------------------------------------------");
+		System.out.println("---Ejercicio 1---");
+		Programador prog1 = new Programador("Yesmy", "Java"); 
+		prog1.programar();
+		
+		System.out.println("---Ejercicio 2---");
+		Monitor mon1 = new Monitor("Dell", "4k");
+		mon1.descripcion();
+		
+		Impresora imp1 = new Impresora("Canon", "Wi-Fi");
+		imp1.imprimir();
 	}
 
 	private static void Prenda() {
 		Prenda p1 = new Prenda("Pantalon", "Negro", "M");
 		Prenda p2 = new Prenda ("Vestido", "Rosado", "S");
 		
-		System.out.println("Clases, objetos y encapsulamiento");
+		System.out.println("------------------------------------------");
+		System.out.println("CLASES, OBJETOS Y ENCAPSULAMIENTO");
 		System.out.println("------------------------------------------");
 		System.out.println("---Prendas agregadas---");
 		p1.mostrar();
