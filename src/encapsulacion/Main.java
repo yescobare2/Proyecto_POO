@@ -5,6 +5,9 @@ import gettersAndSetters.NivelAgua;
 import herencia.Programador;
 import herencia2.Impresora;
 import herencia2.Monitor;
+import overloadingAndOverriding.AvisoBateria;
+import overloadingAndOverriding.AvisoModoAhorro;
+import overloadingAndOverriding.Lampara;
 import polimorfismo.DescuentoEstudiante;
 import polimorfismo.Streaming;
 import polimorfismo2.EntregaBicicleta;
@@ -61,6 +64,24 @@ public class Main {
 		
 		PedidoComida pedido2 = new EntregaMoto(10);
 		pedido2.tiempoEntrega();
+		
+		System.out.println("------------------------------------------");
+		System.out.println("OVERLOADING AND OVERRIDING");
+		System.out.println("------------------------------------------");
+		
+		System.out.println("---Ejercicio 1---");
+		Lampara lamp1 = new Lampara();
+		lamp1.encender();
+		lamp1.encender("rojo");
+		
+		System.out.println("---Ejercicio 2---");
+		AvisoBateria tel1 = new AvisoBateria();
+		tel1.mostrarAviso();
+		tel1.mostrarAviso(20);
+		
+		System.out.println("Clase Hija");
+		AvisoBateria tel2 = new AvisoModoAhorro();
+		tel2.mostrarAviso();
 	}
 
 	private static void Prenda() {
