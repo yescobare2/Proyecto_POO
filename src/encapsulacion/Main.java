@@ -5,6 +5,11 @@ import gettersAndSetters.NivelAgua;
 import herencia.Programador;
 import herencia2.Impresora;
 import herencia2.Monitor;
+import polimorfismo.DescuentoEstudiante;
+import polimorfismo.Streaming;
+import polimorfismo2.EntregaBicicleta;
+import polimorfismo2.EntregaMoto;
+import polimorfismo2.PedidoComida;
 
 public class Main {
 
@@ -41,6 +46,21 @@ public class Main {
 		
 		Impresora imp1 = new Impresora("Canon", "Wi-Fi");
 		imp1.imprimir();
+		
+		System.out.println("------------------------------------------");
+		System.out.println("POLIMORFISMO");
+		System.out.println("------------------------------------------");
+		
+		System.out.println("---Ejercicio 1---");
+		Streaming cuenta1 = new DescuentoEstudiante();
+		cuenta1.calcularCosto();
+		
+		System.out.println("---Ejercicio 2---");
+		PedidoComida pedido1 = new EntregaBicicleta(8);
+		pedido1.tiempoEntrega();
+		
+		PedidoComida pedido2 = new EntregaMoto(10);
+		pedido2.tiempoEntrega();
 	}
 
 	private static void Prenda() {
@@ -53,7 +73,7 @@ public class Main {
 		System.out.println("---Prendas agregadas---");
 		p1.mostrar();
 		p2.mostrar();
-		
+				
 	}
 	
 	
